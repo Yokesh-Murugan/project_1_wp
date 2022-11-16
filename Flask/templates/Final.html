@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Final.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='index.html#about'>About</a></li>
+            <li><a href='#'>Contact</a></li>
+        </ul>
+    </div><br>
+    <br>
+    <br>
+    <div>
+        <form class="input" method="POST" action="/y_predict">
+            <h3 style="font-size:19pt;">Phishing Website Detection using Machine Learning</h3><br>
+            <input name="URL" placeholder="Enter the URL to be verified">
+            <br><br>
+            <button class="button-75" role="button" type="submit"><span class="text">Predict</span></button>
+            <h1>{{url}}</h1>
+            <h1>{{prediction_text}}</h1>
+            <a href="/">Go Back</a>
+            
+            
+        </form>
+    </div>
+</body>
+</html>
